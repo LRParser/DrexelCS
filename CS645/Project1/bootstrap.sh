@@ -9,9 +9,10 @@ gpg -a --export 9AA38DCDD55BE302B | sudo apt-key add -
 # Update apt
 apt-get update
 
-# Install emacs and vim
+# Install emacs, vim and git
 apt-get install emacs
 apt-get install vim
+apt-get install git
 
 # Download the assignment
 
