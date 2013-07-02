@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget https://www.cs.drexel.edu/~greenie/cs645/etch.sources.list
+wget https://www.cs.drexel.edu/~greenie/cs645/etch.sources.list --no-check-certificate
 cat etch.sources.list >> /etc/apt/sources.list
 # Add required keys for apt
 gpg --keyserver pgpkeys.mit.edu --recv-key 9AA38DCDD55BE302B
@@ -16,10 +16,11 @@ apt-get install git
 
 # Download the assignment
 
-wget http://www.cs.drexel.edu/~greenie/cs475/projects/cs475-pp1.tar.bz2
+wget https://www.cs.drexel.edu/~greenie/cs645/projects/cs645-pp1.tar.bz2 --no-check-certificate
 
-tar xjvf cs475-pp1.tar.bz2 
+tar xjvf cs675-pp1.tar.bz2 
 
+cd pp1
 cp -r sploits ~user/
 chown -R user:user ~user/sploits
 cd targets/
