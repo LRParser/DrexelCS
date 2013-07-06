@@ -30,8 +30,6 @@ int main(int argc, char *argv[])
 {
   if (argc != 2)
     {
-        char buf[256];
-        printf("%d\n",sizeof(buf));
       fprintf(stderr, "target2: argc != 2\n");
       exit(EXIT_FAILURE);
     }
