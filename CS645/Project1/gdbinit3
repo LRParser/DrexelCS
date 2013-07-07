@@ -1,0 +1,10 @@
+catch exec
+run
+break foo
+break bar
+break *0x08048470
+break *0x08048461
+break *0x08048466
+break *0x0804846c
+c
+info frame
